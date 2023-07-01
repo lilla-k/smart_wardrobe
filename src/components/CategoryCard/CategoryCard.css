@@ -1,0 +1,22 @@
+.CategoryCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: aliceblue;
+  box-shadow: 3px 3px 3px grey;
+  margin: auto;
+}
+
+.CategoryCard-image{
+  height: 150px;
+}
+
+.CategoryCard-name{
+  font-size: 14px;
+  padding: 5px;
+}

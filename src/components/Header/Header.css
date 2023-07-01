@@ -1,0 +1,44 @@
+.Header {
+    color: var(--light-grey);
+    height: 200px;
+    display: flex;
+    background-image: url("/public/images/drawer.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:100%;
+}
+
+.Header-container{
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-Pacifico {
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+    font-size: 70px;
+}
+
+.Header-Pacifico:hover{
+    color: pink;
+}
+
+.Header-favorite{
+    font-size: 30px;
+    padding: 20px;
+}
+
+.Header-chart{
+    font-size: 30px;
+    padding: 20px;
+}
+
+.Header-plus{
+    font-size: 30px;
+    padding: 20px;
+}
