@@ -5,17 +5,22 @@ import { useParams } from 'react-router-dom';
 
 function SubCategory() {
 
-  let categoryId=useParams().categoryId;
-  console.log(categories[categoryId-1].subCategories);
+  let categoryId = useParams().categoryId;
+  const selectedCategoryIndex = categories.findIndex((item) => item.name === categoryId);
+
 
   return (
-    <div className="Category">
-        {categories[categoryId-1].subCategories.map((item, index) =>
-        <CategoryCard
-          key={item.index}
-          name={item.name}
-          image={item.img}
-        />)}
+    <div className="SubCategory">
+      <div className="SubCategory-cards">
+        {categories[selectedCategoryIndex].subCategories.map((item) =>
+          <CategoryCard
+            key={item.name}
+            name={item.name}
+            image={item.img}
+          />)}
+
+      </div>
+
     </div>
   )
 }

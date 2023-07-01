@@ -6,10 +6,9 @@ function Category() {
 
   return (
     <div className="Category">
-        {categories.map((item, index) =>
+        {categories.map(item =>
         <CategoryCard
-          key={item.index}
-          categoryId={index+1}
+          key={item.name}
           name={item.name}
           image={item.img}
         />)}

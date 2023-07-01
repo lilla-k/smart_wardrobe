@@ -9,7 +9,7 @@ function Header() {
   return (
     <div className="Header">
       <div className="Header-container">
-        <div className="Header-Pacifico">Smart Closet</div>
+        <div className="Header-title">Smart Wardrobe</div>
         <div className="Header-logo">
           <span className="Header-favorite">
             <FontAwesomeIcon icon={faHeart} />

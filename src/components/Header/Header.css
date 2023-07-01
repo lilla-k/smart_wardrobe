@@ -18,8 +18,8 @@
     align-items: center;
 }
 
-.Header-Pacifico {
-    font-family: 'Pacifico', cursive;
+.Header-title {
+    font-family: 'Shadows Into Light', cursive;
     font-weight: 100;
     font-size: 70px;
 }
