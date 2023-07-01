@@ -1,6 +1,17 @@
+.SubCategory{
+    display: flex;
+    flex-direction: column;
+}
+
 .SubCategory-cards{
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.SubCategory-backIcon{
+    align-self: flex-end;
+    font-size: 25px;
+    cursor: pointer;
 }
