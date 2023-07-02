@@ -1,8 +1,4 @@
 .CategoryCard{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 200px;
   height: 200px;
   padding: 10px;
@@ -14,9 +10,18 @@
 
 .CategoryCard-image{
   height: 150px;
+  margin: 10px;
+}
+
+.CategoryCard a{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .CategoryCard-name{
   font-size: 14px;
-  padding: 5px;
 }
