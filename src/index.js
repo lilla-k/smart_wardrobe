@@ -7,8 +7,8 @@ import {
 
 import './index.css';
 import Root from './components/Root/Root.jsx';
-import Category from './components/Category/Category.jsx';
-import SubCategory from './components/SubCategory/SubCategory.jsx';
+import CategoryPage from './components/CategoryPage/CategoryPage.jsx';
+import SubCategoryPage from './components/SubCategoryPage/SubCategoryPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,12 +17,16 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Category/>,
+        element: <CategoryPage/>,
       },
       {
         path: "categories/:categoryId",
-        element: <SubCategory/>,
-      }
+        element: <SubCategoryPage/>,
+      },
+      // {
+      //   path: "categories/:subCategoryId",
+      //   element: <ItemPage/>,
+      // }
     ],
   },
 ]);

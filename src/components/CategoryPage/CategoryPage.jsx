@@ -1,11 +1,11 @@
-import './Category.css'
+import './CategoryPage.css'
 import CategoryCard from '../CategoryCard/CategoryCard'
 import categories from '../../categories.js'
 
-function Category() {
+function CategoryPage() {
 
   return (
-    <div className="Category">
+    <div className="CategoryPage">
         {categories.map(item =>
         <CategoryCard
           key={item.name}
@@ -16,4 +16,4 @@ function Category() {
   )
 }
 
-export default Category
+export default CategoryPage
