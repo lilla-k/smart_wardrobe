@@ -1,6 +1,6 @@
 .Header {
     color: var(--light-grey);
-    height: 200px;
+    height: 150px;
     display: flex;
     background-image: url("/public/images/drawer.jpg");
     background-repeat: no-repeat;
@@ -28,17 +28,34 @@
     color: pink;
 }
 
-.Header-favorite{
+.Header-logo span{
     font-size: 30px;
     padding: 20px;
 }
 
-.Header-chart{
-    font-size: 30px;
-    padding: 20px;
+
+@media screen and (max-width: 1000px) {
+    .Header{
+        height: 100px;
+    }
+    .Header-title {
+        font-size: 40px;
+    }
+    .Header-logo span{
+        font-size: 20px;
+        padding: 15px;
+    }
 }
 
-.Header-plus{
-    font-size: 30px;
-    padding: 20px;
+@media screen and (max-width: 700px) {
+    .Header{
+        height: 100px;
+    }
+    .Header-title {
+        font-size: 30px;
+    }
+    .Header-logo span{
+        font-size: 15px;
+        padding: 10px;
+    }
 }

@@ -1,16 +1,16 @@
 .CategoryCard{
-  width: 200px;
-  height: 200px;
+  height: 150px;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid black; 
   background-color: aliceblue;
   box-shadow: 3px 3px 3px grey;
-  margin: auto;
 }
 
 .CategoryCard-image{
-  height: 150px;
+  width: 100%;
+  height: 100px;
   margin: 10px;
+  object-fit: contain;
 }
 
 .CategoryCard a{

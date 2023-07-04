@@ -6,7 +6,8 @@
 .SubCategoryPage-cards{
     margin: 30px 0;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-grow: 1;
+    flex-shrink: 2; */
     gap: 20px;
 }
 
