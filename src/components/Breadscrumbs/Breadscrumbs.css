@@ -1,0 +1,14 @@
+.Breadscrumbs{
+    color: grey;
+    display: flex;
+    padding: 10px;
+}
+.Breadscrumbs a{
+    text-decoration: none;
+    color: grey;
+}
+
+.Breadscrumbs-arrow{
+    padding: 0 10px;
+}
+
