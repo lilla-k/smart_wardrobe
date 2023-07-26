@@ -8,7 +8,7 @@ function CategoryCard(props) {
     <div className="CategoryCard">
       <Link to={`/categories/${props.categoryName}/${props.subCategoryName || ""}`}>
         <img src={props.image} className="CategoryCard-image" />
-        <div className="CategoryCard-name">{props.name}</div>
+        <div className="CategoryCard-name">{props.subCategoryName || props.categoryName}</div>
       </Link>
     </div>
 
