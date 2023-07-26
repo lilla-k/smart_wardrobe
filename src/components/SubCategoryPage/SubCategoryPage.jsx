@@ -9,6 +9,7 @@ function SubCategoryPage() {
   let categoryId = useParams().categoryId;
   const selectedCategoryIndex = categories.findIndex((item) => item.name === categoryId);
 
+  console.log('subcategorypage')
 
   return (
     <div className="SubCategoryPage">
@@ -17,7 +18,8 @@ function SubCategoryPage() {
         {categories[selectedCategoryIndex].subCategories.map((item) =>
           <CategoryCard
             key={item.name}
-            name={item.name}
+            categoryName={categoryId}
+            subCategoryName={item.name}
             image={item.img}
           />)}
       </div>

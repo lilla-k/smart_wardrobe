@@ -3,9 +3,10 @@ import './CategoryCard.css'
 import { Link } from "react-router-dom";
 
 function CategoryCard(props) {
+
   return (
     <div className="CategoryCard">
-      <Link to={`categories/${props.name}`}>
+      <Link to={`/categories/${props.categoryName}/${props.subCategoryName || ""}`}>
         <img src={props.image} className="CategoryCard-image" />
         <div className="CategoryCard-name">{props.name}</div>
       </Link>

@@ -9,7 +9,7 @@ function CategoryPage() {
         {categories.map(item =>
         <CategoryCard
           key={item.name}
-          name={item.name}
+          categoryName={item.name}
           image={item.img}
         />)}
     </div>

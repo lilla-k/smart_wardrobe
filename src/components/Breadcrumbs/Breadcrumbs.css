@@ -1,14 +1,14 @@
-.Breadscrumbs{
+.Breadcrumbs{
     color: grey;
     display: flex;
     padding: 10px;
 }
-.Breadscrumbs a{
+.Breadcrumbs a{
     text-decoration: none;
     color: grey;
 }
 
-.Breadscrumbs-arrow{
+.Breadcrumbs-arrow{
     padding: 0 10px;
 }
 

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import { useHref } from 'react-router-dom';
 
-import './Breadscrumbs.css'
+import './Breadcrumbs.css'
 
 
 function Breadscrumbs() {
@@ -13,9 +13,9 @@ function Breadscrumbs() {
   console.log(useHref()==="/")
 
   return (
-    <div className="Breadscrumbs">
-      {useHref()!="/"  && <Link to={`/`} >Cloths</Link>}
-      {useHref()!="/"  && <span className="Breadscrumbs-arrow"> <FontAwesomeIcon icon={faAngleRight} /> </span>}
+    <div className="Breadcrumbs">
+      {useHref()!=="/"  && <Link to={`/`} >Cloths</Link>}
+      {useHref()!=="/"  && <span className="Breadcrumbs-arrow"> <FontAwesomeIcon icon={faAngleRight} /> </span>}
       <div>{categoryId}</div>
     </div>
   )

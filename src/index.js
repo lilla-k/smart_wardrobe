@@ -9,6 +9,8 @@ import './index.css';
 import Root from './components/Root/Root.jsx';
 import CategoryPage from './components/CategoryPage/CategoryPage.jsx';
 import SubCategoryPage from './components/SubCategoryPage/SubCategoryPage.jsx';
+import ItemPage from './components/ItemPage/ItemPage.jsx';
+import Item from './components/Item/Item.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,10 +25,14 @@ const router = createBrowserRouter([
         path: "categories/:categoryId",
         element: <SubCategoryPage/>,
       },
-      // {
-      //   path: "categories/:subCategoryId",
-      //   element: <ItemPage/>,
-      // }
+      {
+        path: "categories/:categoryId/:subCategoryId",
+        element: <ItemPage/>,
+      },
+      {
+        path: "cloths/:clothId",
+        element: <Item/>,
+      }
     ],
   },
 ]);
