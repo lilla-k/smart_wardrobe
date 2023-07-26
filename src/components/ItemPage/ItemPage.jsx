@@ -17,7 +17,7 @@ function ItemPage() {
           key={item.id}
           id={item.id}
           image={item.image}
-          type={item.type}
+          name={item.name}
           favorite={item.favorite}
           usage={item.usage}
         />)}
