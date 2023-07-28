@@ -18,7 +18,9 @@ function ItemCard(props){
             <img src={props.image} className="ItemCard-image" />
             {props.favorite &&  <span className="ItemCard-favorite"><FontAwesomeIcon icon={solidfaHeart} /></span>}
             {!props.favorite && <span className="ItemCard-favorite"><FontAwesomeIcon icon={regularfaHeart} /></span>}
-            <div className="ItemCard-usage">{props.usage}</div>
+            <div className="ItemCard-usage">{props.usage}
+              <span class="Itemcard-usage-tooltiptext">usage</span>
+            </div>
           </div>
           <div className="ItemCard-name">{props.name}</div>
         </Link>
