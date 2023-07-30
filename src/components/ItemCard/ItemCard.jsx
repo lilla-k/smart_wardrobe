@@ -22,7 +22,14 @@ function ItemCard(props){
               <span class="Itemcard-usage-tooltiptext">usage</span>
             </div>
           </div>
-          <div className="ItemCard-name">{props.name}</div>
+          <div className="ItemCard-details">
+            <div className="ItemCard-name">{props.name}</div>
+            <div className="ItemCard-price">
+              <div>{props.price}</div><span>&nbsp;Ft</span>
+            </div>
+            <div className="ItemCard-date">{props.purchaseYear}</div>
+          </div>
+          
         </Link>
       </div>
     )

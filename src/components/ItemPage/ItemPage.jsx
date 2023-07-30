@@ -18,6 +18,8 @@ function ItemPage() {
           id={item.id}
           image={item.image}
           name={item.name}
+          purchaseYear={item.purchaseYear}
+          price={item.price}
           favorite={item.favorite}
           usage={item.usage}
         />)}
