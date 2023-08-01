@@ -1,0 +1,41 @@
+.Item{
+    display: flex;
+}
+
+.Item-imageContainer{
+    width: 50%;
+    position: relative;
+}
+
+.Item-image{
+    width: 100%;
+}
+
+.Item-favorite{
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 5px;
+    color: var(--dark-grey);
+}
+
+.Item-info{
+    margin: 20px 50px;
+    width: 50%;
+}
+
+.Item-brand{
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.Item-name{
+    font-size: 18px;
+    margin-bottom: 52px;
+}
+
+.Item-details div{
+    margin: 10px;
+    color: grey;
+    width: 100%;
+}
