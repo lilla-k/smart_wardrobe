@@ -33,6 +33,10 @@
     padding: 20px;
 }
 
+.Header-plus:hover{
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 1000px) {
     .Header{
