@@ -11,7 +11,7 @@
 }
 
 .NewClothModal-modal{
-    position: fixed;
+    position: absolute;
     top: 30%;
     left: calc(50% - 300px);
     width: 600px;
@@ -25,3 +25,19 @@
     0% { opacity:0 }
     100% { opacity: 0.8; }
   }
+
+.NewClothModal-closeButton{
+    position: absolute;
+    top:0;
+    right: 0;
+    font-weight: bold;
+    padding: 5px;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+}
+
+.NewClothModal-closeButton:hover{
+    cursor: pointer;
+    background-color: rgb(212, 209, 209);
+}

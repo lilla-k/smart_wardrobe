@@ -33,7 +33,7 @@ function Header() {
         </div>
         {/* <div>Login</div> */}
       </div>
-      {openModal && <NewClothModal/>}
+      {openModal && <NewClothModal onClose={()=>setOpenModal(false)}/>}
     </div>
   )
 
