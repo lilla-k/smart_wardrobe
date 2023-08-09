@@ -19,7 +19,7 @@ function ItemCard(props){
             {props.favorite &&  <span className="ItemCard-favorite"><FontAwesomeIcon icon={solidfaHeart} /></span>}
             {!props.favorite && <span className="ItemCard-favorite"><FontAwesomeIcon icon={regularfaHeart} /></span>}
             <div className="ItemCard-usage">{props.usage}
-              <span class="Itemcard-usage-tooltiptext">usage</span>
+              <span className="Itemcard-usage-tooltiptext">usage</span>
             </div>
           </div>
           <div className="ItemCard-details">
