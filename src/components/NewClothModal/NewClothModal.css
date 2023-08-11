@@ -24,6 +24,7 @@
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    margin: 10px;
 }
 
 .NewClothModal-modal select{
@@ -32,11 +33,30 @@
     margin: 10px;
 }
 
-.NewClorhModal-inputs input{
+.NewClothModal-inputs input{
     width: 150px;
     margin: 10px;
     padding: 5px;
     display: block;
+}
+
+.NewClothModal-photo{
+    display: flex;
+    align-items: center;
+}
+
+.NewClothModal-photo label{
+    margin: 10px;
+}
+
+.NewClothModal-submit{
+    padding: 4px;
+    margin: 20px auto;
+    display: block;
+}
+
+.NewClothModal-submit:hover{
+    cursor: pointer;
 }
 
 @keyframes fadeIn {

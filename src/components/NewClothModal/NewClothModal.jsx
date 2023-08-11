@@ -30,16 +30,20 @@ function NewClothModal(props){
                         <option value="Subcategory" hidden>Subcategory</option>
                         {categories[selectedCategoryIndex].subCategories?.map(subcategory => <option key={subcategory.name}>{subcategory.name}</option>)}
                     </select>}
-                    <div className="NewClorhModal-inputs">
+                    <div className="NewClothModal-inputs">
                         <input placeholder="brand"/>
                         <input placeholder="type" />
                         <input placeholder="color" />
                         <input placeholder="material" />
                         <input type="month" />
                         <input placeholder="price"/>
-
                     </div>
+                    <div className="NewClothModal-photo">
+                        <label>Upload a photo about your cloth:</label>
+                        <input type="file"/>
                     </div>
+                    <input className="NewClothModal-submit" type="submit"/>
+                </div>
             </div>
 
             
