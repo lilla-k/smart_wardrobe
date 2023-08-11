@@ -19,19 +19,27 @@ function NewClothModal(props){
         <div>
             <div className="NewClothModal-backdrop" onClick= {closeHandler}>
                 <div className="NewClothModal-modal">
-                <div className="NewClothModal-closeButton" onClick= {props.onClose}>x</div>
-                <div className="NewClothModal-title">Add a new cloth</div>
-                <select onChange={event=>setSelectedCategory(event.target.value)} >
-                    <option value="Category">Category</option>
-                    {categories.map((category) => <option value={category.name}>{category.name}</option>)}
-                </select>
-                {selectedCategoryIndex >-1 && categories[selectedCategoryIndex].subCategories!= undefined &&
+                    <div className="NewClothModal-closeButton" onClick= {props.onClose}>x</div>
+                    <div className="NewClothModal-title">Add a new cloth</div>
+                    <select onChange={event=>setSelectedCategory(event.target.value)} >
+                        <option value="Category">Category</option>
+                        {categories.map((category) => <option value={category.name} key={category.name}>{category.name}</option>)}
+                    </select>
+                    {selectedCategoryIndex >-1 && categories[selectedCategoryIndex].subCategories!= undefined &&
                     <select>
                         <option value="Subcategory" hidden>Subcategory</option>
-                        {categories[selectedCategoryIndex].subCategories?.map(subcategory => <option>{subcategory.name}</option>)}
-                    </select>
-                }
-            </div>
+                        {categories[selectedCategoryIndex].subCategories?.map(subcategory => <option key={subcategory.name}>{subcategory.name}</option>)}
+                    </select>}
+                    <div className="NewClorhModal-inputs">
+                        <input placeholder="brand"/>
+                        <input placeholder="type" />
+                        <input placeholder="color" />
+                        <input placeholder="material" />
+                        <input type="month" />
+                        <input placeholder="price"/>
+
+                    </div>
+                    </div>
             </div>
 
             
