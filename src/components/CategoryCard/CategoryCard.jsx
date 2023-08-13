@@ -4,13 +4,10 @@ import cloths from '../../cloths.js'
 import { Link } from "react-router-dom";
 
 function CategoryCard(props) {
-  debugger;
-  console.log(cloths);
+ 
   const subCategoryItemsNumber = cloths.filter(element => {
-    debugger;
-    return element.subCategory===props.subCategoryName}).length;
 
-  console.log(subCategoryItemsNumber);
+    return element.subCategory===props.subCategoryName}).length;
 
   return (
     <div className="CategoryCard">

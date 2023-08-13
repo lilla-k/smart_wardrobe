@@ -9,8 +9,6 @@ function SubCategoryPage() {
   let categoryId = useParams().categoryId;
   const selectedCategoryIndex = categories.findIndex((item) => item.name === categoryId);
 
-  console.log('subcategorypage')
-
   return (
     <div className="SubCategoryPage">
       <div className= "SubCategoryPage-title">{categoryId}</div>

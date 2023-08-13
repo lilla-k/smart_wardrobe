@@ -1,19 +1,41 @@
 import './NewClothModal.css'
 import categories from '../../categories';
+import cloths from '../../cloths'
 import {useState} from 'react';
 
 function NewClothModal(props){
 
     const [selectedCategory, setSelectedCategory] = useState("");
+    const [selectedSubcategory, setSelectedSubcategory] = useState("");
+    const [brand, setBrand] =useState("");
+    const [type, setType] = useState("");
+    const [color, setColor] = useState("");
+    const [material, setMaterial] = useState("");
+    const [date, setDate] = useState(null);
+    const [price, setPrice] = useState(null);
     
     const closeHandler=(event)=>{
         if(event.target.className==="NewClothModal-backdrop"){
             props.onClose();
         }
     }
+
+    const submitHandler=() => {
+        cloths.push({
+            id: new Date().getTime(),
+            subCategory:selectedSubcategory, 
+            name:type, 
+            brand:brand,
+            color:color,
+            material: material,
+            date: date,
+            price: price
+        });
+        props.onClose();
+        console.log(cloths);
+    }
     
     const selectedCategoryIndex=categories.findIndex((category) => category.name === selectedCategory);
-    console.log(selectedCategoryIndex);
 
     return(
         <div>
@@ -26,23 +48,23 @@ function NewClothModal(props){
                         {categories.map((category) => <option value={category.name} key={category.name}>{category.name}</option>)}
                     </select>
                     {selectedCategoryIndex >-1 && categories[selectedCategoryIndex].subCategories!= undefined &&
-                    <select>
+                    <select onChange={event=>setSelectedSubcategory(event.target.value)}>
                         <option value="Subcategory" hidden>Subcategory</option>
                         {categories[selectedCategoryIndex].subCategories?.map(subcategory => <option key={subcategory.name}>{subcategory.name}</option>)}
                     </select>}
                     <div className="NewClothModal-inputs">
-                        <input placeholder="brand"/>
-                        <input placeholder="type" />
-                        <input placeholder="color" />
-                        <input placeholder="material" />
-                        <input type="month" />
-                        <input placeholder="price"/>
+                        <input placeholder="brand" onChange={event=>setBrand(event.target.value)}/>
+                        <input placeholder="type" onChange={event=>setType(event.target.value)}/>
+                        <input placeholder="color" onChange={event=>setColor(event.target.value)}/>
+                        <input placeholder="material" onChange={event=>setMaterial(event.target.value)}/>
+                        <input type="month" onChange={event=>setDate(event.target.value)}/>
+                        <input placeholder="price" onChange={event=>setPrice(event.target.value)}/>
                     </div>
                     <div className="NewClothModal-photo">
                         <label>Upload a photo about your cloth:</label>
                         <input type="file"/>
                     </div>
-                    <input className="NewClothModal-submit" type="submit"/>
+                    <input className="NewClothModal-submit" type="submit" onClick={submitHandler}/>
                 </div>
             </div>
 
