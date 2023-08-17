@@ -1,6 +1,5 @@
 import './NewClothModal.css'
 import categories from '../../categories';
-import cloths from '../../cloths'
 import {useState} from 'react';
 
 function NewClothModal(props){
@@ -13,7 +12,31 @@ function NewClothModal(props){
     const [material, setMaterial] = useState("");
     const [date, setDate] = useState(null);
     const [price, setPrice] = useState(null);
+
+    const cloth={
+        id: new Date().getTime(),
+        subCategory: selectedSubcategory, 
+        name: type, 
+        brand: brand,
+        color: color,
+        material: material,
+        date: date,
+        price: price
+    }
     
+    async function postCloth() {
+        const response = await fetch('http://localhost:3001/api/cloths', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(cloth)
+        });
+        if (response.status === 200) {
+          console.log("uploaded")
+        } else {
+          console.log("failed to upload")
+        }
+    }
+
     const closeHandler=(event)=>{
         if(event.target.className==="NewClothModal-backdrop"){
             props.onClose();
@@ -21,18 +44,8 @@ function NewClothModal(props){
     }
 
     const submitHandler=() => {
-        cloths.push({
-            id: new Date().getTime(),
-            subCategory:selectedSubcategory, 
-            name:type, 
-            brand:brand,
-            color:color,
-            material: material,
-            date: date,
-            price: price
-        });
+        postCloth();
         props.onClose();
-        console.log(cloths);
     }
     
     const selectedCategoryIndex=categories.findIndex((category) => category.name === selectedCategory);
