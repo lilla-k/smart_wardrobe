@@ -1,5 +1,7 @@
 import Header from '../Header/Header'
 import Breadcrumbs from '../Breadcrumbs/Breadcrumbs'
+import NewClothModal from '../NewClothModal/NewClothModal';
+
 import { Outlet } from "react-router-dom";
 import { useState } from 'react';
 
@@ -50,15 +52,16 @@ function Root() {
     "usage": 2
   }]);
 
-
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <div className="Root">
-      <Header />
+      <Header openModalHandler={()=>setOpenModal(true)}/>
       <Breadcrumbs />
       <Outlet
         context= {cloths}
       />
+      {openModal && <NewClothModal onClose={()=>setOpenModal(false)}/>}
     </div>
 
   )

@@ -5,16 +5,9 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 import './Header.css'
 
-import {useState} from 'react';
-import NewClothModal from '../NewClothModal/NewClothModal'
 
-function Header() {
+function Header({openModalHandler}) {
 
-  const [openModal, setOpenModal] = useState(false);
-
-  const handleOpenModal=()=> {
-    setOpenModal(true)
-  }
 
   return (
     <div className="Header">
@@ -27,13 +20,12 @@ function Header() {
           <span className="Header-chart">
             <FontAwesomeIcon icon={faChartLine} />
           </span>
-          <span className="Header-plus" onClick={handleOpenModal}>
+          <span className="Header-plus" onClick={openModalHandler}>
             <FontAwesomeIcon icon={faPlus} />
           </span>
         </div>
         {/* <div>Login</div> */}
       </div>
-      {openModal && <NewClothModal onClose={()=>setOpenModal(false)}/>}
     </div>
   )
 
