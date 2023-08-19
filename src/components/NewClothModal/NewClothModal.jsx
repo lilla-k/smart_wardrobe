@@ -2,7 +2,7 @@ import './NewClothModal.css'
 import categories from '../../categories';
 import {useState} from 'react';
 
-function NewClothModal(props){
+function NewClothModal({onClose}){
 
     const [selectedCategory, setSelectedCategory] = useState("");
     const [selectedSubcategory, setSelectedSubcategory] = useState("");
@@ -39,13 +39,13 @@ function NewClothModal(props){
 
     const closeHandler=(event)=>{
         if(event.target.className==="NewClothModal-backdrop"){
-            props.onClose();
+            onClose();
         }
     }
 
     const submitHandler=() => {
         postCloth();
-        props.onClose();
+        onClose();
     }
     
     const selectedCategoryIndex=categories.findIndex((category) => category.name === selectedCategory);
@@ -54,7 +54,7 @@ function NewClothModal(props){
         <div>
             <div className="NewClothModal-backdrop" onClick= {closeHandler}>
                 <div className="NewClothModal-modal">
-                    <div className="NewClothModal-closeButton" onClick= {props.onClose}>x</div>
+                    <div className="NewClothModal-closeButton" onClick= {onClose}>x</div>
                     <div className="NewClothModal-title">Add a new cloth</div>
                     <select onChange={event=>setSelectedCategory(event.target.value)} >
                         <option value="Category">Category</option>
