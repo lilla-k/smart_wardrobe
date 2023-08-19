@@ -14,7 +14,6 @@ function Root() {
   async function loadCloths () {
     const response = await fetch("http://localhost:3001/api/cloths");
     const data = await response.json();
-    console.log(data);
     setCloths(data);
   }
 
