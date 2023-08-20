@@ -7,13 +7,9 @@ import { useOutletContext } from "react-router-dom";
 
 function SubCategoryPage() {
   
-
   let categoryId = useParams().categoryId;
   const selectedCategoryIndex = categories.findIndex((item) => item.name === categoryId);
-
   const cloths = useOutletContext();
-
-
 
   return (
     <div className="SubCategoryPage">
