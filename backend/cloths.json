@@ -42,23 +42,14 @@
     "usage": 2
   },
   {
-    "id": 1692531411641,
+    "id": 1692566503985,
     "subCategory": "Long Sleeve T-shirts",
-    "name": "dddddd",
-    "brand": "ffffff",
-    "color": "sssss",
-    "material": "aaa",
-    "date": null,
-    "price": "5000"
-  },
-  {
-    "id": 1692532110326,
-    "subCategory": "Tops",
-    "name": "hello",
-    "brand": "hello",
-    "color": "hello",
-    "material": "dddd",
-    "date": "2023-07",
-    "price": "2000"
+    "name": "dddd",
+    "brand": "ffff",
+    "color": "fffff",
+    "purchaseYear": 2023,
+    "material": "",
+    "date": "2023-06",
+    "price": 2000
   }
 ]

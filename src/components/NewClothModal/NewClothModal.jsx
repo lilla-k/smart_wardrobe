@@ -19,10 +19,13 @@ function NewClothModal({onClose}){
         name: type, 
         brand: brand,
         color: color,
+        purchaseYear: date && parseInt(date.slice(0,4), 10),
         material: material,
         date: date,
         price: price
     }
+
+    console.log(JSON.stringify(cloth));
     
     async function postCloth() {
         const response = await fetch('http://localhost:3001/api/cloths', {
@@ -71,7 +74,7 @@ function NewClothModal({onClose}){
                         <input placeholder="color" onChange={event=>setColor(event.target.value)}/>
                         <input placeholder="material" onChange={event=>setMaterial(event.target.value)}/>
                         <input type="month" onChange={event=>setDate(event.target.value)}/>
-                        <input placeholder="price" onChange={event=>setPrice(event.target.value)}/>
+                        <input placeholder="price" onChange={event=>setPrice(parseInt(event.target.value, 10))}/>
                     </div>
                     <div className="NewClothModal-photo">
                         <label>Upload a photo about your cloth:</label>
