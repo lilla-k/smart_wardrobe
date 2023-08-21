@@ -19,13 +19,14 @@ function NewClothModal({onClose}){
         name: type, 
         brand: brand,
         color: color,
-        purchaseYear: date && parseInt(date.slice(0,4), 10),
         material: material,
-        date: date,
-        price: price
+        purchaseYear: date && parseInt(date.slice(0,4), 10),
+        purchaseMonth: date && parseInt(date.slice(5,7), 10),
+        price: price,
+        favorite: false,
+        usage: 0
     }
 
-    console.log(JSON.stringify(cloth));
     
     async function postCloth() {
         const response = await fetch('http://localhost:3001/api/cloths', {
@@ -34,7 +35,9 @@ function NewClothModal({onClose}){
           body: JSON.stringify(cloth)
         });
         if (response.status === 200) {
-          console.log("uploaded")
+          console.log("uploaded");
+          console.log(date);
+          console.log(JSON.stringify(cloth));
         } else {
           console.log("failed to upload")
         }

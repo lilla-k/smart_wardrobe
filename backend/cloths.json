@@ -42,14 +42,16 @@
     "usage": 2
   },
   {
-    "id": 1692566503985,
+    "id": 1692651655943,
     "subCategory": "Long Sleeve T-shirts",
-    "name": "dddd",
-    "brand": "ffff",
-    "color": "fffff",
+    "name": "gfgfgfgf",
+    "brand": "dsdsdsds",
+    "color": "cxcxcxc",
+    "material": "nbnbnbn",
     "purchaseYear": 2023,
-    "material": "",
-    "date": "2023-06",
-    "price": 2000
+    "purchaseMonth": 6,
+    "price": 2000,
+    "favorite": false,
+    "usage": 0
   }
 ]
