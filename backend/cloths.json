@@ -53,5 +53,55 @@
     "price": 2000,
     "favorite": false,
     "usage": 0
+  },
+  {
+    "price": 0,
+    "subCategory": "Long Sleeve T-shirts"
+  },
+  {
+    "price": -100,
+    "subCategory": "Long Sleeve T-shirts"
+  },
+  {
+    "price": -100,
+    "subCategory": "Long Sleeve T-shirts"
+  },
+  {
+    "price": 100,
+    "subCategory": "Long Sleeve T-shirts"
+  },
+  {
+    "id": 1692653450579,
+    "subCategory": "",
+    "name": "",
+    "brand": "",
+    "color": "",
+    "material": "",
+    "purchaseYear": null,
+    "purchaseMonth": null,
+    "price": -200,
+    "favorite": false,
+    "usage": 0
+  },
+  {
+    "id": 1692653477015,
+    "subCategory": "",
+    "name": "",
+    "brand": "",
+    "color": "",
+    "material": "",
+    "purchaseYear": null,
+    "purchaseMonth": null,
+    "price": -200,
+    "favorite": false,
+    "usage": 0
+  },
+  {
+    "price": 100,
+    "subCategory": "Long Sleeve T-shirts"
+  },
+  {
+    "price": 100,
+    "subCategory": "Long Sleeve T-shirts"
   }
 ]
