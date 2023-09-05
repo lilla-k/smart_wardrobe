@@ -1,4 +1,4 @@
-const { MongoClient } = require("mongodb");
+import { MongoClient } from "mongodb";
 
 const uri = "mongodb+srv://smartWardrobeBackend:pgEPSQ4hptl4uisE@cluster0.yjrzlwq.mongodb.net/?retryWrites=true&w=majority";
 
@@ -13,4 +13,4 @@ async function getCloths(){
     return cloths;
 }
 
-module.exports=getCloths;
+export default getCloths;
