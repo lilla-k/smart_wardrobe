@@ -17,8 +17,8 @@ function ItemPage() {
       {subcategoryCloths.map(item =>
         <ItemCard
           brand={item.brand}
-          key={item.id}
-          id={item.id}
+          key={item._id}
+          id={item._id}
           image={item.image}
           name={item.name}
           purchaseYear={item.purchaseYear}

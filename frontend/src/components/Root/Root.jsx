@@ -27,7 +27,9 @@ function Root() {
   return (
     <div className="Root">
       <Header openModalHandler={()=>setOpenModal(true)}/>
-      <Breadcrumbs />
+      <Breadcrumbs 
+        cloths= {cloths}
+      />
       <Outlet
         context= {cloths}
       />

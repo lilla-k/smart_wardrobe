@@ -8,8 +8,9 @@ import { useParams } from 'react-router-dom';
 
 function ItemCard({brand, id, image, name, purchaseYear, price, favorite, usage}){
 
-  let categoryId=useParams().categoryId;
-  let subCategoryId=useParams().subCategoryId;
+  const categoryId=useParams().categoryId;
+  const subCategoryId=useParams().subCategoryId;
+  console.log(id);
 
     return(
       <div className="ItemCard">

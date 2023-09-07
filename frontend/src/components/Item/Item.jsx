@@ -8,9 +8,8 @@ import { faHeart as regularfaHeart } from '@fortawesome/free-regular-svg-icons'
 function Item() {
 
 	const cloths = useOutletContext();
-
-	let clothId = parseInt(useParams().clothId);
-	const selectedCloth = cloths.find(item => item.id === clothId);
+	const clothId = useParams().clothId;
+	const selectedCloth = cloths.find(item => item._id === clothId);
 	return (
 		<div className="Item">
 			<div className="Item-imageContainer">

@@ -1,16 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom";
-import { useParams } from 'react-router-dom';
+import { useParams, useOutletContext } from 'react-router-dom';
 
 import './Breadcrumbs.css'
 
 
-function Breadcrumbs() {
+function Breadcrumbs({cloths}) {
 
-  let categoryId = useParams().categoryId;
-  let subCategoryId = useParams().subCategoryId;
-  let clothId = useParams().clothId;
+  const categoryId = useParams().categoryId;
+  const subCategoryId = useParams().subCategoryId;
+  const clothId = useParams().clothId;
+  const selectedCloth = cloths.find(item => item._id === clothId)
 
   return (
     <div className="Breadcrumbs">
@@ -30,7 +31,7 @@ function Breadcrumbs() {
       {clothId && 
       <div>
         <span className="Breadcrumbs-arrow"> <FontAwesomeIcon icon={faAngleRight} /> </span>
-        <div>{clothId}</div>
+        <div>{selectedCloth.name}</div>
       </div>
       }
       
