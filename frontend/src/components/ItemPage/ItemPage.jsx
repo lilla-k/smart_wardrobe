@@ -9,12 +9,12 @@ function ItemPage() {
   const cloths = useOutletContext();
 
   let subCategoryId = useParams().subCategoryId;
-  const selectedCloths = cloths.filter(cloth=> cloth.subCategory===subCategoryId);
+  const subcategoryCloths = cloths.filter(cloth=> cloth.subCategory===subCategoryId);
 
 
   return (
     <div className="ItemPage">
-      {selectedCloths.map(item =>
+      {subcategoryCloths.map(item =>
         <ItemCard
           brand={item.brand}
           key={item.id}

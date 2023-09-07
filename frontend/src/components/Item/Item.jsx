@@ -1,12 +1,13 @@
 import './Item.css'
-import { useParams } from 'react-router-dom';
+import { useParams, useOutletContext } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart as solidfaHeart } from '@fortawesome/free-solid-svg-icons'
 import { faHeart as regularfaHeart } from '@fortawesome/free-regular-svg-icons'
 
+
 function Item() {
 
-	const cloths=[];
+	const cloths = useOutletContext();
 
 	let clothId = parseInt(useParams().clothId);
 	const selectedCloth = cloths.find(item => item.id === clothId);
