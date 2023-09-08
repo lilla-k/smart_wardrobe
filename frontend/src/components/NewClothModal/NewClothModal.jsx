@@ -1,6 +1,8 @@
 import './NewClothModal.css'
 import categories from '../../categories';
 import {useState} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faSpinner} from '@fortawesome/free-solid-svg-icons';
 
 function NewClothModal({onClose}){
 
@@ -12,9 +14,10 @@ function NewClothModal({onClose}){
     const [material, setMaterial] = useState("");
     const [date, setDate] = useState(null);
     const [price, setPrice] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(false);
 
     const cloth={
-        id: new Date().getTime(),
         subCategory: selectedSubcategory, 
         name: type, 
         brand: brand,
@@ -34,13 +37,7 @@ function NewClothModal({onClose}){
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(cloth)
         });
-        if (response.status === 200) {
-          console.log("uploaded");
-          console.log(date);
-          console.log(JSON.stringify(cloth));
-        } else {
-          console.log("failed to upload")
-        }
+        return response.status;
     }
 
     const closeHandler=(event)=>{
@@ -49,9 +46,14 @@ function NewClothModal({onClose}){
         }
     }
 
-    const submitHandler=() => {
-        postCloth();
-        onClose();
+    const submitHandler = async() => {
+        setIsLoading(true);
+        if (await postCloth() === 201){
+          onClose();
+        } else {
+          setError(true);
+        }
+        setIsLoading(false);
     }
     
     const selectedCategoryIndex=categories.findIndex((category) => category.name === selectedCategory);
@@ -83,7 +85,9 @@ function NewClothModal({onClose}){
                         <label>Upload a photo about your cloth:</label>
                         <input type="file"/>
                     </div>
-                    <input className="NewClothModal-submit" type="submit" onClick={submitHandler}/>
+                    {!isLoading && <input className="NewClothModal-submit" type="submit" onClick={submitHandler}/>}
+                    {isLoading && <div class="NewClothModal-loading"><FontAwesomeIcon icon={faSpinner} spin /></div>}
+                    {error && <div className="NewClothModal-error">Try again later!</div>}
                 </div>
             </div>
 

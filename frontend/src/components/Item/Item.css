@@ -3,8 +3,9 @@
 }
 
 .Item-imageContainer{
-    width: 50%;
+    width: 25%;
     position: relative;
+    margin: 20px;
 }
 
 .Item-image{
@@ -25,7 +26,7 @@
 }
 
 .Item-brand{
-    font-size: 34px;
+    font-size: 30px;
     margin-bottom: 12px;
 }
 

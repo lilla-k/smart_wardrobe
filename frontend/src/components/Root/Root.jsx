@@ -10,6 +10,7 @@ import './Root.css'
 function Root() {
 
   const [cloths, setCloths] = useState([]);
+  const [openModal, setOpenModal] = useState(false);
   
   async function loadCloths () {
     const response = await fetch("http://localhost:3001/api/cloths");
@@ -22,7 +23,6 @@ function Root() {
   }, []);
 
 
-  const [openModal, setOpenModal] = useState(false);
 
   return (
     <div className="Root">

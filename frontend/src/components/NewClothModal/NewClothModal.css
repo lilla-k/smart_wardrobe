@@ -79,3 +79,14 @@
     cursor: pointer;
     background-color: rgb(212, 209, 209);
 }
+
+.NewClothModal-error{
+    color: red;
+    text-align: center;
+}
+
+.NewClothModal-loading{
+    text-align: center;
+    margin: 20px auto;
+    padding: 4px;
+}
