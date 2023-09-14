@@ -1,6 +1,7 @@
 {
   "name": "smart_wardrobe_frontend",
   "version": "0.1.0",
+  "type":"module",
   "private": true,
   "dependencies": {
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
